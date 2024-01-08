@@ -14,5 +14,16 @@ const messages = [
 module.exports = {
     getIndex: (req, res) => {
       res.render("index.ejs",{ title: "Mini Messageboard", messages: messages });
+    },
+
+    getForm: (req, res) => {
+        res.render("form.ejs");
+    },
+    
+    submitForm: (req, res) => {
+        const { messageText, messageUser } = req.body;
+        console.log(messageText)
+        messages.push({text: messageText, user: messageUser, added: new Date()})
+        res.redirect("/")
     }
 }
