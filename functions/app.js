@@ -3,7 +3,6 @@ const serverless = require('serverless-http')
 const path = require('path');
 const app = express()
 const router = express.Router();
-const port = 3000
 const indexRoute = require("../routes");
 const formRoute = require("../routes");
 const formSubmission = require("../routes");
