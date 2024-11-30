@@ -7,5 +7,10 @@ body{
 }
 
 #send_button{
-    background-color: orange
+    background-color: orange;
+    margin-top: 0.5px;
+}
+
+#expand_collapse_button{
+    margin-top: 20px;
 }
