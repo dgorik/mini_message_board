@@ -1,9 +1,6 @@
 [build]
   functions = "functions"
 
-[dev]
-  command = "npm run dev"
-
 [[redirects]]
   from = "/*"
   to = "/.netlify/functions/app"
