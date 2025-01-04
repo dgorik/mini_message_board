@@ -1,9 +1,9 @@
-function ShowAndHide(){
-    var element = document.getElementById("showorhide")
-
-    if(element.style.display == "none"){
-        element.style.display = 'block';
+function ShowAndHide(index) {
+    var message = document.getElementById(`showorhide-${index}`);
+    
+    if (message.style.display === "none") {
+        message.style.display = 'block'; // Expand the clicked message
     } else {
-        element.style.display = 'none';
+        message.style.display = 'none'; // Collapse if already expanded
     }
 }

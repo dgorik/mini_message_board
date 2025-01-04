@@ -10,19 +10,19 @@
 
 <body>
     <div> 
-        <h4> Our little messageboard</h4>
+        <h1> Our little messageboard</h1>
     <% for(var i=0; i<messages.length; i++) {%>
         <tr>
             <div class = "container1">
-                <h2> Messages </h2>
-                <section id = "showorhide">
+                <h3> Messages # <%= i + 1 %> </h3>
+                <section id = "showorhide-<%= i %>" style="display:none;">
                     <%= messages[i].text%>
-                    <h2> User Name </h2>
+                    <h3> User Name </h3>
                     <%= messages[i].user%>
-                    <h2> Date </h2>
+                    <h3> Date </h3>
                     <%= messages[i].added%>
                 </section>
-                <button onclick="ShowAndHide()"> Expand/Collapse</button>
+                <button onclick="ShowAndHide('<%= i %>')"> Expand/Collapse</button>
                 <br> <br>
             </div>
         </tr>
@@ -30,7 +30,7 @@
     </div>
 
     <a href="/new">
-        <input type="button" value="Send me something" />
+        <input type="button" id = "send_button" value="Send me something" />
      </a>
 
      <script src="../client javascript/main.js"></script>

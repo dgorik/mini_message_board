@@ -1,7 +1,11 @@
-#showorhide{
+#messages_collapsed{
     display: none;
 }
 
 body{
-    background-color: green;
+    background-color: beige;
+}
+
+#send_button{
+    background-color: orange
 }
