@@ -22,7 +22,6 @@ module.exports = {
     
     submitForm: (req, res) => {
         const { messageText, messageUser } = req.body;
-        console.log(messageText)
         messages.push({text: messageText, user: messageUser, added: new Date()})
         res.redirect("/")
     }
