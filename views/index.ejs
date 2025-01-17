@@ -5,26 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Messageboard</title>
+    <link rel="stylesheet" href="../css/styles.css">
 </head>
 
 <body>
-    <h4> We are here with routes, controllers and views!</h4>
+    <div> 
+        <h4> Our little messageboard</h4>
     <% for(var i=0; i<messages.length; i++) {%>
         <tr>
-            <div>
-                <h3> User </h3>
-                <%= i + 1%>
+            <div class = "container1">
                 <h2> Messages </h2>
-                <%= messages[i].text%>
-                <h2> User Name </h2>
-                <%= messages[i].user%>
-                <h2> Date </h2>
-                <%= messages[i].date%>
+                <section id = "showorhide">
+                    <%= messages[i].text%>
+                    <h2> User Name </h2>
+                    <%= messages[i].user%>
+                    <h2> Date </h2>
+                    <%= messages[i].added%>
+                </section>
+                <button onclick="ShowAndHide()"> Expand/Collapse</button>
+                <br> <br>
             </div>
         </tr>
     <% } %>
+    </div>
 
     <a href="/new">
         <input type="button" value="Send me something" />
      </a>
+
+     <script src="../client javascript/main.js"></script>
 </body>
