@@ -20,6 +20,6 @@ app.use("/", indexRoute);
 app.use("/new", formRoute);
 app.use("/new", formSubmission);
 
-app.use('/.netlify/functions/app', router)
+app.use('/functions/app', router)
 
 module.exports.handler = serverless(app)
