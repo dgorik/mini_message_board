@@ -1,4 +1,5 @@
 const express = require('express')
+const serverless = require('serverless-http')
 const path = require('path');
 const app = express()
 const router = express.Router();
@@ -20,8 +21,6 @@ app.use("/", indexRoute);
 app.use("/new", formRoute);
 app.use("/new", formSubmission);
 
-app.use('/.netlify/functions/submitMessage', router)
-
-module.exports = app;
+app.use('/.netlify/functions/app', router)
 
 module.exports.handler = serverless(app)
