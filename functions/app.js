@@ -9,7 +9,7 @@ const formRoute = require("../routes");
 const formSubmission = require("../routes");
 
 
-app.set('views');
+app.set('views', './views');
 app.set('view engine', 'ejs');
 
 app.use(express.urlencoded({ extended: true }));
