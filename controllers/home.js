@@ -9,11 +9,11 @@ var options = { weekday: 'long', year: 'numeric', month: 'long', day: 'numeric',
 
 module.exports = {
     getIndex: (req, res) => {
-      res.render("index.ejs",{ title: "Mini Messageboard", messages: messages });
+      res.render("index",{ title: "Mini Messageboard", messages: messages });
     },
 
     getForm: (req, res) => {
-        res.render("form.ejs");
+        res.render("form");
     },
     
     submitForm: (req, res) => {
